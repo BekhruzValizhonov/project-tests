@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.quiz{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p.correct{
+  background-color: cadetblue;
+}
+
+.answers{
+  cursor: pointer;
+}
+
+.answers:hover{
+  background-color: cadetblue;
+  color: #fff;
+}
+
+.correct{
+  background-color: yellow;
+  color: #fff;
+}
+
+h1.error{
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.modal{
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s ease;
+}
+
+.modal.active{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__content{
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  transform: scale(0.5);
+  transition: .4s all;
+  width: 50vw;
+}
+
+.modal__content.active{
+  transform: scale(1);
+}
+
+h5{
+  cursor: pointer;
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  width: 50%;
+}
+
+form{
+  width: 50%;
+  margin:5rem auto;
+}
+
+
+@media  screen and (max-width: 460px){
+  .quiz_card{
+    width: 250px !important;
+  }
+
+  .pagination{
+    width: 80%;
+  }
+
+  h3.text_modal{
+    font-size: 15px;
+  }
+}
